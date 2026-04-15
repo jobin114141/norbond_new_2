@@ -49,3 +49,21 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
+// Set active navigation link based on current page URL
+document.addEventListener('DOMContentLoaded', () => {
+    const navLinks = document.querySelectorAll('.nav-links a');
+    let currentPath = window.location.pathname.split('/').pop();
+    
+    // Default to index.html if on the root path
+    if (currentPath === '') {
+        currentPath = 'index.html';
+    }
+
+    navLinks.forEach(link => {
+        const href = link.getAttribute('href');
+        if (href === currentPath) {
+            link.classList.add('active');
+        }
+    });
+});

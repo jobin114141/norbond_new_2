@@ -26,19 +26,32 @@
     </header>
 
     <main>
-      <section class="insights-page section">
+      <!-- Beautiful Typography Hero -->
+      <section class="insights-hero section" style="padding-top: 14rem; padding-bottom: 6rem; position: relative; overflow: hidden;">
         <div class="container centered">
-          <h1 class="section-title reveal active" style="font-size: 5rem; letter-spacing: 0.5rem; margin-bottom: 5rem;">OUR INSIGHTS</h1>
+          <!-- Background Watermark Text -->
+          <h1 class="reveal-up" style="font-size: clamp(6rem, 18vw, 12rem); font-weight: 900; letter-spacing: 1rem; opacity: 0.03; text-transform: uppercase; position: absolute; top: 30%; left: 50%; transform: translate(-50%, -50%); width: 100%; pointer-events: none; white-space: nowrap;">INTELLIGENCE</h1>
           
+          <!-- Foreground Content -->
+          <div style="position: relative; z-index: 2;">
+            <span class="section-tag reveal-up">DATA & VISION</span>
+            <h1 class="section-title reveal-up" style="margin-bottom: 1.5rem; letter-spacing: 0.3rem;">OUR INSIGHTS</h1>
+            <p class="reveal-up" style="max-width: 700px; margin: 0 auto; font-weight: 300; font-size: 1.1rem; opacity: 0.7; line-height: 1.8;">Unveiling the metrics and strategic intelligence that drive Norbond's continuous global expansion and unparalleled market influence.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Animated Metrics Cluster -->
+      <section class="insights-page section" style="background-color: var(--bg-primary); padding-bottom: 2rem;">
+        <div class="container centered">
           <div class="metrics-cluster">
-            <!-- Central Main Metric -->
-            <div class="metric-main reveal-up active">
+            
+            <div class="metric-main reveal-up">
                <span class="m-num">5</span>
                <span class="m-label">INTERNAL BRANDS</span>
             </div>
 
-            <!-- Tier 1 -->
-            <div class="metrics-grid tier-1 reveal-up active">
+            <div class="metrics-grid tier-1 reveal-up" style="transition-delay: 0.1s;">
               <div class="metric-item">
                 <span class="m-num">10+</span>
                 <span class="m-label">EXTERNAL BRANDS</span>
@@ -49,37 +62,67 @@
               </div>
               <div class="metric-item">
                 <span class="m-num">4</span>
-                <span class="m-label">COUNTRIES WE OPERATE IN</span>
+                <span class="m-label">COUNTRIES OPERATING IN</span>
               </div>
               <div class="metric-item">
                 <span class="m-num">5</span>
-                <span class="m-label">INDUSTRIES WE OPERATE IN</span>
+                <span class="m-label">INDUSTRIES SPANNED</span>
               </div>
             </div>
 
-            <!-- Tier 2 -->
-            <div class="metrics-grid tier-2 reveal-up active">
+            <div class="metrics-grid tier-2 reveal-up" style="transition-delay: 0.2s; margin-bottom: 0;">
               <div class="metric-item">
                 <span class="m-num">25+</span>
-                <span class="m-label">COUNTRIES WE SUPPLY TO</span>
+                <span class="m-label">SUPPLY REGIONS</span>
               </div>
               <div class="metric-item">
                 <span class="m-num">25+</span>
-                <span class="m-label">COUNTRIES WE SOURCE FROM</span>
+                <span class="m-label">SOURCING REGIONS</span>
               </div>
               <div class="metric-item">
                 <span class="m-num">10+</span>
-                <span class="m-label">STRATEGIC PARTNERSHIPS</span>
+                <span class="m-label">STRATEGIC PARTNERS</span>
               </div>
               <div class="metric-item">
-                <span class="m-num">5000+</span>
-                <span class="m-label">ITEMS IN OUR CATALOG</span>
+                <span class="m-num">5k+</span>
+                <span class="m-label">CATALOG ITEMS</span>
               </div>
             </div>
+            
           </div>
         </div>
       </section>
 
+      <!-- Deep Insights Section with Alternating rows -->
+      <section class="section container" style="padding-top: 4rem;">
+        <div class="section-header centered reveal-up">
+          <span class="section-tag">MARKET INTELLIGENCE</span>
+          <h2 class="section-title">Strategic Operations</h2>
+          <p class="section-subtitle">A deep dive into how Norbond utilizes complex market data to optimize global supply chains, enhance product exclusivity, and ensure sustainable practices step-by-step.</p>
+        </div>
+
+        <div class="brand-row reveal-up" style="margin-top: 5rem;">
+          <div class="brand-detail">
+            <h3>Global Resource Optimization</h3>
+            <p>Our deep market intelligence allows us to pivot effectively across regions and demographics. By understanding cultural nuances and global economic shifts, Norbond’s strategic initiatives remain agile and robust. We leverage complex data points to optimize our supply chain and distribution networks, reaching a broader audience while maintaining pure luxury.</p>
+            <a href="#" class="btn-text" style="display:inline-block; margin-top: 2rem;">Read Full Report →</a>
+          </div>
+          <div class="brand-visual">
+            <img src="assets/comp222.jpg" alt="Global Operations">
+          </div>
+        </div>
+
+        <div class="brand-row reverse reveal-up">
+          <div class="brand-detail">
+            <h3>Sustainable Logistics Model</h3>
+            <p>Every percentage point in our data represents a conscious choice towards sustainability. From responsibly sourced textiles in global hubs to minimizing carbon footprints across shipping lanes, we analyze and continually refine our operations. Our goal is to establish the gold standard in reducing environmental impact without compromising exclusivity.</p>
+            <a href="#" class="btn-text" style="display:inline-block; margin-top: 2rem;">Discover Our Approach →</a>
+          </div>
+          <div class="brand-visual">
+            <img src="assets/interior.jpg" alt="Sustainable Architecture">
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="footer section">
