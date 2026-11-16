@@ -6,11 +6,11 @@
     <title>SIGNATURES | NORBOND</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@100;300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body class="subpage">
-    <header class="header scrolled" id="header">
+  <body class="sig-page">
+    <header class="header" id="header">
       <nav class="nav container">
         <div class="nav-logo">
           <a href="index.html">NORBOND</a>
@@ -20,98 +20,199 @@
           <li><a href="entities.html">ENTITIES</a></li>
           <li><a href="story.html">STORY</a></li>
           <li><a href="insights.html">INSIGHTS</a></li>
-          <li class="nav-contact"><a href="#contact"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></a></li>
         </ul>
       </nav>
     </header>
 
     <main>
-      <section class="signatures-page section">
+
+      <!-- PAGE HERO -->
+      <section class="sig-hero">
+        <div class="sig-hero-bg"></div>
+        <div class="sig-hero-overlay"></div>
+        <div class="sig-hero-content container">
+          <span class="section-tag reveal">SIGNATURE COLLECTION</span>
+          <h1 class="reveal">Our Signature<br><span class="highlight">Brands</span></h1>
+          <p class="sig-hero-sub reveal">At Norbond, we take pride in a collection of signature brands that reflect our commitment to craftsmanship, creativity, and innovation.</p>
+        </div>
+        <div class="sig-hero-scroll-line"></div>
+      </section>
+
+      <!-- BRAND LISTING -->
+      <section class="sig-brands section">
         <div class="container">
-          <div class="section-header centered">
-            <span class="section-tag">SIGNATURE COLLECTION</span>
-            <h2 class="section-title">Our Signature Brands</h2>
-            <p class="section-subtitle">At Norbond, we take pride in a collection of signature brands that reflect our commitment to craftsmanship, creativity, and innovation. Each brand is a testament to our vision for enhancing the everyday living experience through style, comfort, and quality.</p>
-          </div>
-          
-          <div class="brand-row reveal-up">
-            <div class="brand-detail">
-              <h3>Luxe Decora</h3>
-              <p>Elevating living spaces with luxurious décor and lifestyle products that embody sophistication and modern elegance. Luxe Decora redefines home aesthetics with timeless design and unparalleled quality.</p>
-            </div>
-            <div class="brand-visual">
-              <img src="assets/Signatures Luxe Decora.jpg" alt="Luxe Decora">
-            </div>
-          </div>
 
-          <div class="brand-row reverse reveal-up">
-            <div class="brand-detail">
-              <h3>Fatbag</h3>
-              <p>A unique brand that merges relaxation with style. Fatbag crafts innovative bean bag designs that provide both comfort and a modern aesthetic to any space.</p>
+          <!-- Brand 01 — Luxe Decora -->
+          <article class="sig-brand-row reveal-up">
+            <div class="sig-brand-num">01</div>
+            <div class="sig-brand-info">
+              <span class="sig-brand-category">Home Décor &amp; Lifestyle</span>
+              <h2 class="sig-brand-name">Luxe Decora</h2>
+              <p class="sig-brand-desc">Elevating living spaces with luxurious décor and lifestyle products that embody sophistication and modern elegance. Luxe Decora redefines home aesthetics with timeless design and unparalleled quality.</p>
+              <a href="#" class="sig-brand-link">
+                Discover Brand
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
             </div>
-            <div class="brand-visual">
-              <img src="assets/Signatures Fatbag.jpg" alt="Fatbag">
+            <div class="sig-brand-img-wrap">
+              <img src="assets/Signatures Luxe Decora.jpg" alt="Luxe Decora" class="sig-brand-img">
             </div>
-          </div>
+          </article>
 
-          <div class="brand-row reveal-up">
-            <div class="brand-detail">
-              <h3>Bean Bagss</h3>
-              <p>Dedicated solely to creating the most comfortable and stylish bean bags. Bean Bagss is a brand that combines innovative designs, superior comfort, and high-quality materials. Whether for lounging, relaxation, or functional seating, Bean Bagss offers the perfect blend of comfort and luxury.</p>
-            </div>
-            <div class="brand-visual">
-              <img src="assets/beanbags1.jpg" alt="Bean Bagss">
-            </div>
-          </div>
+          <div class="sig-divider"></div>
 
-          <div class="brand-row reverse reveal-up">
-            <div class="brand-detail">
-              <h3>Jumbble</h3>
-              <p>Jumbble brings a new level of comfort and style to your home with a diverse range of bean bags and soft seating solutions. Designed with both innovation and comfort in mind, Jumbble is for those who appreciate creative and functional furniture that adapts to any living space.</p>
+          <!-- Brand 02 — Fatbag -->
+          <article class="sig-brand-row reverse reveal-up">
+            <div class="sig-brand-num">02</div>
+            <div class="sig-brand-info">
+              <span class="sig-brand-category">Innovative Seating</span>
+              <h2 class="sig-brand-name">Fatbag</h2>
+              <p class="sig-brand-desc">A unique brand that merges relaxation with style. Fatbag crafts innovative bean bag designs that provide both comfort and a modern aesthetic to any space.</p>
+              <a href="#" class="sig-brand-link">
+                Discover Brand
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
             </div>
-            <div class="brand-visual">
-              <img src="assets/Jumbble.png" alt="Jumbble">
+            <div class="sig-brand-img-wrap">
+              <img src="assets/Signatures Fatbag.jpg" alt="Fatbag" class="sig-brand-img">
             </div>
-          </div>
+          </article>
 
-          <div class="brand-row reveal-up">
-            <div class="brand-detail">
-              <h3>La Chariot</h3>
-              <p>Experience the Pinnacle of Luxury Fashion with La Chariot. A premier signature of Norbond, redefining elegance through bespoke tailoring and high-end textiles that set global trends.</p>
+          <div class="sig-divider"></div>
+
+          <!-- Brand 03 — Bean Bagss -->
+          <article class="sig-brand-row reveal-up">
+            <div class="sig-brand-num">03</div>
+            <div class="sig-brand-info">
+              <span class="sig-brand-category">Comfort &amp; Leisure</span>
+              <h2 class="sig-brand-name">Bean Bagss</h2>
+              <p class="sig-brand-desc">Dedicated solely to creating the most comfortable and stylish bean bags. Bean Bagss combines innovative designs, superior comfort, and high-quality materials for the perfect blend of comfort and luxury.</p>
+              <a href="#" class="sig-brand-link">
+                Discover Brand
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
             </div>
-            <div class="brand-visual">
-              <img src="assets/Signatures La Cahriot.jpg" alt="La Chariot">
+            <div class="sig-brand-img-wrap">
+              <img src="assets/beanbags1.jpg" alt="Bean Bagss" class="sig-brand-img">
             </div>
-          </div>
+          </article>
+
+          <div class="sig-divider"></div>
+
+          <!-- Brand 04 — Jumbble -->
+          <article class="sig-brand-row reverse reveal-up">
+            <div class="sig-brand-num">04</div>
+            <div class="sig-brand-info">
+              <span class="sig-brand-category">Functional Furniture</span>
+              <h2 class="sig-brand-name">Jumbble</h2>
+              <p class="sig-brand-desc">Jumbble brings a new level of comfort and style to your home with a diverse range of bean bags and soft seating solutions. Designed with both innovation and comfort in mind, for those who appreciate creative and functional furniture.</p>
+              <a href="#" class="sig-brand-link">
+                Discover Brand
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+            </div>
+            <div class="sig-brand-img-wrap">
+              <img src="assets/img5.jpg" alt="Jumbble" class="sig-brand-img">
+            </div>
+          </article>
+
+          <div class="sig-divider"></div>
+
+          <!-- Brand 05 — La Chariot -->
+          <article class="sig-brand-row reveal-up">
+            <div class="sig-brand-num">05</div>
+            <div class="sig-brand-info">
+              <span class="sig-brand-category">Luxury Fashion</span>
+              <h2 class="sig-brand-name">La Chariot</h2>
+              <p class="sig-brand-desc">Experience the pinnacle of luxury fashion with La Chariot. A premier signature of Norbond, redefining elegance through bespoke tailoring and high-end textiles that set global trends.</p>
+              <a href="#" class="sig-brand-link">
+                Discover Brand
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+            </div>
+            <div class="sig-brand-img-wrap">
+              <img src="assets/Signatures La Cahriot.jpg" alt="La Chariot" class="sig-brand-img">
+            </div>
+          </article>
+
         </div>
       </section>
+
     </main>
 
-    <footer class="footer section">
-      <div class="container grid">
+    <footer class="footer" id="contact">
+      <div class="container footer-top-grid">
         <div class="footer-brand">
+          <span class="footer-tag">PARENT FRAMEWORK</span>
           <a href="index.html" class="footer-logo">NORBOND</a>
-          <p>Home of Exquisite Brands. Excellence across every industry.</p>
+          <p class="footer-desc">Home of Exquisite Brands. Defining luxury, architectural elegance, and artisanal heritage across global frontiers.</p>
+          <a href="mailto:info@norbond.com" class="footer-email-link">info@norbond.com</a>
         </div>
+
         <div class="footer-links">
-          <h4>Peoples</h4>
-          <ul>
+          <h4 class="footer-col-title">PORTFOLIO</h4>
+          <ul class="footer-nav-list">
+            <li><a href="signatures.html">Signatures</a></li>
+            <li><a href="entities.html">Entities</a></li>
+            <li><a href="story.html">Our Story</a></li>
+            <li><a href="index.html#global">Global Network</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h4 class="footer-col-title">PEOPLES</h4>
+          <ul class="footer-nav-list">
             <li><a href="#">Commitment</a></li>
             <li><a href="#">Work Environment</a></li>
             <li><a href="#">Work With Us</a></li>
+            <li><a href="#">Ethics &amp; Integrity</a></li>
           </ul>
         </div>
+
         <div class="footer-links">
-          <h4>World</h4>
-          <ul>
+          <h4 class="footer-col-title">WORLD</h4>
+          <ul class="footer-nav-list">
             <li><a href="index.html#contact">Contact</a></li>
             <li><a href="insights.html">Insights</a></li>
             <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Privacy Policy</a></li>
           </ul>
         </div>
       </div>
+
+      <!-- Huge Typography Proximity Section -->
+      <div class="container">
+        <div class="wv-huge-typography-wrapper" id="waveyuHugeTypography">
+          <span class="wv-char">N</span>
+          <span class="wv-char">O</span>
+          <span class="wv-char">R</span>
+          <span class="wv-char">B</span>
+          <span class="wv-char">O</span>
+          <span class="wv-char">N</span>
+          <span class="wv-char">D</span>
+        </div>
+      </div>
+
       <div class="footer-bottom container">
         <p>&copy; 2026 Norbond Enterprises. All rights reserved.</p>
+        <div class="footer-bottom-locations">
+          <span>Dubai</span> &bull; <span>London</span> &bull; <span>Moscow</span> &bull; <span>Kerala</span>
+        </div>
       </div>
     </footer>
 

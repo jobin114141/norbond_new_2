@@ -6,11 +6,11 @@
     <title>INSIGHTS | NORBOND</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@100;300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body class="subpage">
-    <header class="header scrolled" id="header">
+  <body class="insights-page">
+    <header class="header" id="header">
       <nav class="nav container">
         <div class="nav-logo">
           <a href="index.html">NORBOND</a>
@@ -20,140 +20,247 @@
           <li><a href="entities.html">ENTITIES</a></li>
           <li><a href="story.html">STORY</a></li>
           <li><a href="insights.html">INSIGHTS</a></li>
-          <li class="nav-contact"><a href="#contact"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1-9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></a></li>
         </ul>
       </nav>
     </header>
 
     <main>
-      <!-- Beautiful Typography Hero -->
-      <section class="insights-hero section" style="padding-top: 14rem; padding-bottom: 6rem; position: relative; overflow: hidden;">
-        <div class="container centered">
-          <!-- Background Watermark Text -->
-          <h1 class="reveal-up" style="font-size: clamp(6rem, 18vw, 12rem); font-weight: 900; letter-spacing: 1rem; opacity: 0.03; text-transform: uppercase; position: absolute; top: 30%; left: 50%; transform: translate(-50%, -50%); width: 100%; pointer-events: none; white-space: nowrap;">INTELLIGENCE</h1>
-          
-          <!-- Foreground Content -->
-          <div style="position: relative; z-index: 2;">
-            <span class="section-tag reveal-up">DATA & VISION</span>
-            <h1 class="section-title reveal-up" style="margin-bottom: 1.5rem; letter-spacing: 0.3rem;">OUR INSIGHTS</h1>
-            <p class="reveal-up" style="max-width: 700px; margin: 0 auto; font-weight: 300; font-size: 1.1rem; opacity: 0.7; line-height: 1.8;">Unveiling the metrics and strategic intelligence that drive Norbond's continuous global expansion and unparalleled market influence.</p>
+      <!-- HERO -->
+      <section class="ins-hero">
+        <div class="ins-hero-bg"></div>
+        <div class="ins-hero-overlay"></div>
+        <div class="ins-hero-content container">
+          <span class="section-tag reveal">DATA &amp; VISION</span>
+          <h1 class="reveal">Market<br><span class="highlight">Intelligence</span></h1>
+          <p class="ins-hero-sub reveal">Unveiling the metrics, operational scale, and strategic insights that drive Norbond's global expansion and luxury benchmark.</p>
+        </div>
+        <div class="ins-hero-line"></div>
+      </section>
+
+      <!-- EXECUTIVE INTRO -->
+      <section class="ins-intro-section section">
+        <div class="container">
+          <div class="ins-intro-grid reveal-up">
+            <div class="ins-intro-label">
+              <span class="section-tag">STRATEGIC DATA</span>
+            </div>
+            <div class="ins-intro-text">
+              <p>At Norbond, operational excellence is informed by rigorous market intelligence. We bridge traditional craftsmanship with predictive logistics and global demand mapping, ensuring each brand house achieves sustainable growth while upholding timeless luxury.</p>
+              <p>Operating across Europe, the Middle East, and Asia, our metrics reflect deep regional integration, sustainable sourcing integrity, and the agile management of an expansive luxury portfolio.</p>
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- Animated Metrics Cluster -->
-      <section class="insights-page section" style="background-color: var(--bg-primary); padding-bottom: 2rem;">
-        <div class="container centered">
-          <div class="metrics-cluster">
-            
-            <div class="metric-main reveal-up">
-               <span class="m-num">5</span>
-               <span class="m-label">INTERNAL BRANDS</span>
-            </div>
+      <!-- METRICS BAND (DARK LUXURY ACCENT) -->
+      <section class="ins-metrics-band">
+        <div class="container">
+          <div class="section-header reveal-up">
+            <span class="section-tag">PERFORMANCE INDICATORS</span>
+            <h2 class="section-title">The Numbers Behind Norbond</h2>
+          </div>
 
-            <div class="metrics-grid tier-1 reveal-up" style="transition-delay: 0.1s;">
-              <div class="metric-item">
-                <span class="m-num">10+</span>
-                <span class="m-label">EXTERNAL BRANDS</span>
-              </div>
-              <div class="metric-item">
-                <span class="m-num">3</span>
-                <span class="m-label">GLOBAL HEADQUARTERS</span>
-              </div>
-              <div class="metric-item">
-                <span class="m-num">4</span>
-                <span class="m-label">COUNTRIES OPERATING IN</span>
-              </div>
-              <div class="metric-item">
-                <span class="m-num">5</span>
-                <span class="m-label">INDUSTRIES SPANNED</span>
-              </div>
+          <!-- Tier 1 Primary Metrics -->
+          <div class="ins-metrics-primary reveal-up">
+            <div class="ins-metric-card">
+              <span class="ins-metric-val">05</span>
+              <span class="ins-metric-lbl">Internal Brands</span>
             </div>
+            <div class="ins-metric-card">
+              <span class="ins-metric-val">10+</span>
+              <span class="ins-metric-lbl">Strategic Partners</span>
+            </div>
+            <div class="ins-metric-card">
+              <span class="ins-metric-val">04</span>
+              <span class="ins-metric-lbl">Operating Nations</span>
+            </div>
+            <div class="ins-metric-card">
+              <span class="ins-metric-val">05</span>
+              <span class="ins-metric-lbl">Industries Spanned</span>
+            </div>
+          </div>
 
-            <div class="metrics-grid tier-2 reveal-up" style="transition-delay: 0.2s; margin-bottom: 0;">
-              <div class="metric-item">
-                <span class="m-num">25+</span>
-                <span class="m-label">SUPPLY REGIONS</span>
-              </div>
-              <div class="metric-item">
-                <span class="m-num">25+</span>
-                <span class="m-label">SOURCING REGIONS</span>
-              </div>
-              <div class="metric-item">
-                <span class="m-num">10+</span>
-                <span class="m-label">STRATEGIC PARTNERS</span>
-              </div>
-              <div class="metric-item">
-                <span class="m-num">5k+</span>
-                <span class="m-label">CATALOG ITEMS</span>
-              </div>
+          <!-- Tier 2 Operational Network -->
+          <div class="ins-metrics-secondary reveal-up">
+            <div class="ins-metric-card-sm">
+              <span class="ins-metric-val">25+</span>
+              <span class="ins-metric-lbl">Global Supply Regions</span>
             </div>
-            
+            <div class="ins-metric-card-sm">
+              <span class="ins-metric-val">25+</span>
+              <span class="ins-metric-lbl">Sourcing Regions</span>
+            </div>
+            <div class="ins-metric-card-sm">
+              <span class="ins-metric-val">5k+</span>
+              <span class="ins-metric-lbl">Catalog Items</span>
+            </div>
+            <div class="ins-metric-card-sm">
+              <span class="ins-metric-val">100%</span>
+              <span class="ins-metric-lbl">Traceable Supply</span>
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- Deep Insights Section with Alternating rows -->
-      <section class="section container" style="padding-top: 4rem;">
-        <div class="section-header centered reveal-up">
-          <span class="section-tag">MARKET INTELLIGENCE</span>
-          <h2 class="section-title">Strategic Operations</h2>
-          <p class="section-subtitle">A deep dive into how Norbond utilizes complex market data to optimize global supply chains, enhance product exclusivity, and ensure sustainable practices step-by-step.</p>
-        </div>
+      <!-- STRATEGIC REPORTS SECTION -->
+      <section class="ins-reports section">
+        <div class="container">
+          <div class="section-header reveal-up">
+            <span class="section-tag">CASE ANALYSES</span>
+            <h2 class="section-title">Strategic Operations</h2>
+          </div>
 
-        <div class="brand-row reveal-up" style="margin-top: 5rem;">
-          <div class="brand-detail">
-            <h3>Global Resource Optimization</h3>
-            <p>Our deep market intelligence allows us to pivot effectively across regions and demographics. By understanding cultural nuances and global economic shifts, Norbond’s strategic initiatives remain agile and robust. We leverage complex data points to optimize our supply chain and distribution networks, reaching a broader audience while maintaining pure luxury.</p>
-            <a href="#" class="btn-text" style="display:inline-block; margin-top: 2rem;">Read Full Report →</a>
-          </div>
-          <div class="brand-visual">
-            <img src="assets/comp222.jpg" alt="Global Operations">
-          </div>
-        </div>
+          <!-- Report 01 -->
+          <article class="ins-report-row reveal-up">
+            <div class="ins-report-num">01</div>
+            <div class="ins-report-info">
+              <span class="ins-report-cat">Resource Optimization</span>
+              <h3 class="ins-report-title">Global Resource &amp; Agile Distribution</h3>
+              <p class="ins-report-desc">Our deep market intelligence allows us to pivot effectively across regions and demographics. By understanding cultural nuances and global economic shifts, Norbond’s strategic initiatives remain agile and robust.</p>
+              <ul class="ins-report-bullets">
+                <li>Dynamic logistics routing across Dubai, London, and European corridors</li>
+                <li>Predictive inventory optimization preserving brand exclusivity</li>
+                <li>Localized market adaptation without diluting conglomerate standards</li>
+              </ul>
+              <a href="#" class="ins-report-link">
+                Read Full Report
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+            </div>
+            <div class="ins-report-img-wrap">
+              <img src="assets/comp222.jpg" alt="Global Operations" class="ins-report-img">
+            </div>
+          </article>
 
-        <div class="brand-row reverse reveal-up">
-          <div class="brand-detail">
-            <h3>Sustainable Logistics Model</h3>
-            <p>Every percentage point in our data represents a conscious choice towards sustainability. From responsibly sourced textiles in global hubs to minimizing carbon footprints across shipping lanes, we analyze and continually refine our operations. Our goal is to establish the gold standard in reducing environmental impact without compromising exclusivity.</p>
-            <a href="#" class="btn-text" style="display:inline-block; margin-top: 2rem;">Discover Our Approach →</a>
-          </div>
-          <div class="brand-visual">
-            <img src="assets/interior.jpg" alt="Sustainable Architecture">
+          <div class="ins-report-divider"></div>
+
+          <!-- Report 02 -->
+          <article class="ins-report-row reverse reveal-up">
+            <div class="ins-report-num">02</div>
+            <div class="ins-report-info">
+              <span class="ins-report-cat">Sustainable Infrastructure</span>
+              <h3 class="ins-report-title">Sustainable Logistics &amp; Living Systems</h3>
+              <p class="ins-report-desc">Every percentage point in our data represents a conscious choice towards sustainability. From responsibly sourced textiles to minimizing emissions across shipping corridors, we continuously refine our operations.</p>
+              <ul class="ins-report-bullets">
+                <li>Circularity-focused design framework across home and fashion sectors</li>
+                <li>Ethical raw material provenance verified at generational workshops</li>
+                <li>Carbon-neutral transit targets established across primary hubs</li>
+              </ul>
+              <a href="#" class="ins-report-link">
+                Discover Our Approach
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+            </div>
+            <div class="ins-report-img-wrap">
+              <img src="assets/comp333.jpg" alt="Sustainable Living Systems" class="ins-report-img">
+            </div>
+          </article>
+
+          <div class="ins-report-divider"></div>
+
+          <!-- Report 03 -->
+          <article class="ins-report-row reveal-up">
+            <div class="ins-report-num">03</div>
+            <div class="ins-report-info">
+              <span class="ins-report-cat">Enterprise Synergy</span>
+              <h3 class="ins-report-title">Bespoke Heritage Meets Modern Scale</h3>
+              <p class="ins-report-desc">Connecting generational craft masters in Kerala, London, and Milan with global luxury consumers. We preserve artisan individuality while providing centralized corporate governance, logistics, and capital resilience.</p>
+              <ul class="ins-report-bullets">
+                <li>Unified enterprise digital backbone across all subsidiary brand houses</li>
+                <li>Seamless supply chain integration from harvest to showroom</li>
+                <li>Long-term equity investment in sustainable craft heritage</li>
+              </ul>
+              <a href="#" class="ins-report-link">
+                Explore Enterprise Framework
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+            </div>
+            <div class="ins-report-img-wrap">
+              <img src="assets/Companynamepage.jpg" alt="Enterprise Synergy" class="ins-report-img">
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- EXECUTIVE STATEMENT -->
+      <section class="ins-quote-section">
+        <div class="container">
+          <div class="ins-quote-box reveal-up">
+            <blockquote class="ins-quote-text">
+              "Excellence is not happenstance; it is the compounding result of data-driven intelligence married to uncompromising craftsmanship."
+            </blockquote>
+            <span class="ins-quote-author">Norbond Strategic Council &middot; Executive Review</span>
           </div>
         </div>
       </section>
     </main>
 
-    <footer class="footer section">
-      <div class="container grid">
+    <footer class="footer" id="contact">
+      <div class="container footer-top-grid">
         <div class="footer-brand">
+          <span class="footer-tag">PARENT FRAMEWORK</span>
           <a href="index.html" class="footer-logo">NORBOND</a>
-          <p>Home of Exquisite Brands. Excellence across every industry.</p>
+          <p class="footer-desc">Home of Exquisite Brands. Defining luxury, architectural elegance, and artisanal heritage across global frontiers.</p>
+          <a href="mailto:info@norbond.com" class="footer-email-link">info@norbond.com</a>
         </div>
+
         <div class="footer-links">
-          <h4>Peoples</h4>
-          <ul>
+          <h4 class="footer-col-title">PORTFOLIO</h4>
+          <ul class="footer-nav-list">
+            <li><a href="signatures.html">Signatures</a></li>
+            <li><a href="entities.html">Entities</a></li>
+            <li><a href="story.html">Our Story</a></li>
+            <li><a href="index.html#global">Global Network</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h4 class="footer-col-title">PEOPLES</h4>
+          <ul class="footer-nav-list">
             <li><a href="#">Commitment</a></li>
             <li><a href="#">Work Environment</a></li>
             <li><a href="#">Work With Us</a></li>
+            <li><a href="#">Ethics &amp; Integrity</a></li>
           </ul>
         </div>
+
         <div class="footer-links">
-          <h4>World</h4>
-          <ul>
+          <h4 class="footer-col-title">WORLD</h4>
+          <ul class="footer-nav-list">
             <li><a href="index.html#contact">Contact</a></li>
             <li><a href="insights.html">Insights</a></li>
             <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Privacy Policy</a></li>
           </ul>
         </div>
       </div>
+
+      <!-- Huge Typography Proximity Section -->
+      <div class="container">
+        <div class="wv-huge-typography-wrapper" id="waveyuHugeTypography">
+          <span class="wv-char">N</span>
+          <span class="wv-char">O</span>
+          <span class="wv-char">R</span>
+          <span class="wv-char">B</span>
+          <span class="wv-char">O</span>
+          <span class="wv-char">N</span>
+          <span class="wv-char">D</span>
+        </div>
+      </div>
+
       <div class="footer-bottom container">
         <p>&copy; 2026 Norbond Enterprises. All rights reserved.</p>
-        <div class="bottom-legal">
-           <a href="#">TERMS</a>
-           <a href="#">PRIVACY</a>
-           <a href="#">SITEMAP</a>
+        <div class="footer-bottom-locations">
+          <span>Dubai</span> &bull; <span>London</span> &bull; <span>Moscow</span> &bull; <span>Kerala</span>
         </div>
       </div>
     </footer>
