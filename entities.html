@@ -14,6 +14,27 @@
        ENTITIES PAGE — CORPORATE EDITORIAL REDESIGN
        ============================================================ */
 
+    /* ── Header & Nav transparency in hero ── */
+    .entities-page .header {
+      background: transparent;
+      border-bottom: none;
+      backdrop-filter: none;
+    }
+    .entities-page .nav-links a,
+    .entities-page .nav-logo a {
+      color: #fff;
+    }
+    .entities-page .header.scrolled {
+      background: var(--glass-bg);
+      backdrop-filter: blur(10px);
+      padding: 1rem 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+    .entities-page .header.scrolled .nav-links a,
+    .entities-page .header.scrolled .nav-logo a {
+      color: var(--text-primary);
+    }
+
     /* ── Hero ── */
     .ent-hero {
       position: relative;
@@ -27,7 +48,7 @@
     .ent-hero-bg {
       position: absolute;
       inset: 0;
-      background: url('assets/Entity - Banner.jpg') center / cover no-repeat;
+      background: url('assets/img16.jpeg') center / cover no-repeat;
       filter: brightness(0.3) contrast(1.2);
       transform: scale(1.07);
       transition: transform 12s ease;
@@ -37,15 +58,8 @@
     .ent-hero-overlay {
       position: absolute;
       inset: 0;
-      background: linear-gradient(130deg, rgba(8,8,8,0.85) 0%, rgba(8,8,8,0.35) 55%, transparent 100%);
+      background: rgba(8, 8, 8, 0.45);
       z-index: 2;
-    }
-    .ent-hero-bottom {
-      position: absolute;
-      bottom: 0; left: 0; right: 0;
-      height: 220px;
-      background: linear-gradient(to bottom, transparent, var(--bg-primary));
-      z-index: 3;
     }
     .ent-hero-content {
       position: relative;
@@ -208,20 +222,38 @@
 
     .ent-entity-article {
       display: grid;
-      grid-template-columns: 80px 1fr 400px;
-      gap: 5rem;
+      grid-template-columns: 40px 1fr 400px;
+      grid-template-areas: "num info img";
+      column-gap: 2rem;
       align-items: start;
       padding: 5rem 0;
       border-top: 1px solid rgba(26,26,26,0.1);
       transition: var(--transition);
     }
     .ent-entity-article:last-child { border-bottom: 1px solid rgba(26,26,26,0.1); }
+
+    .ent-entity-article .ent-art-num { grid-area: num; align-self: flex-start; padding-top: 0.4rem; }
+    .ent-entity-article .ent-art-info { grid-area: info; }
+    .ent-entity-article .ent-art-img-wrap { grid-area: img; margin-left: 2rem; }
+
     .ent-entity-article.reverse {
-      grid-template-columns: 400px 1fr 80px;
+      grid-template-columns: 40px 380px 1fr;
+      grid-template-areas: "num img info";
+      column-gap: 2rem;
     }
-    .ent-entity-article.reverse .ent-art-num { order: 3; text-align: right; }
-    .ent-entity-article.reverse .ent-art-img-wrap { order: 1; }
-    .ent-entity-article.reverse .ent-art-info { order: 2; }
+    .ent-entity-article.reverse .ent-art-num {
+      text-align: left;
+    }
+    .ent-entity-article.reverse .ent-art-img-wrap {
+      grid-area: img;
+      margin-left: 0;
+    }
+    .ent-entity-article.reverse .ent-art-info {
+      grid-area: info;
+      justify-self: end;
+      margin-left: auto;
+      max-width: 480px;
+    }
 
     .ent-art-num {
       font-size: 0.6rem;
@@ -334,6 +366,30 @@
     }
     .ent-entity-article:hover .ent-art-img { transform: scale(1.04); filter: grayscale(0%); }
 
+    /* Logo-as-visual panel — zoomed out, padded, contained */
+    .ent-logo-img-wrap {
+      background: #f5f4f0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      aspect-ratio: 3/4;
+    }
+    .ent-logo-fit {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: contain !important;
+      padding: 1.5rem;
+      filter: grayscale(100%) !important;
+      transform: none !important;
+      opacity: 0.55;
+      transition: opacity 0.4s ease !important;
+    }
+    .ent-entity-article:hover .ent-logo-fit {
+      opacity: 0.9;
+      transform: none !important;
+      filter: grayscale(100%) !important;
+    }
+
     /* parent entity — dark accent */
     .ent-entity-article.is-parent {
       background: #0a0a0a;
@@ -342,6 +398,9 @@
       margin: 0 -2rem;
       width: calc(100% + 4rem);
       border-top-color: transparent;
+      grid-template-columns: 40px 1fr 400px;
+      grid-template-areas: "num info img";
+      column-gap: 2rem;
     }
     .ent-entity-article.is-parent .ent-art-num,
     .ent-entity-article.is-parent .ent-art-cat { color: rgba(255,255,255,0.35); opacity: 1; }
@@ -353,6 +412,54 @@
     .ent-entity-article.is-parent .ent-art-link { color: rgba(255,255,255,0.7); border-bottom-color: rgba(255,255,255,0.25); }
     .ent-entity-article.is-parent .ent-art-logo { filter: grayscale(100%) invert(1); opacity: 0.55; }
     .ent-entity-article.is-parent + .ent-entity-article { border-top-color: rgba(26,26,26,0.1); }
+
+    /* parent right-side white logo badge */
+    .ent-parent-badge {
+      background: transparent;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      aspect-ratio: 3/4;
+      padding: 2.5rem;
+      transition: var(--transition);
+      margin-left: 2rem;
+      margin-top: 3.5rem;
+    }
+    .ent-parent-badge:hover {
+      border-color: transparent;
+      background: transparent;
+    }
+    .ent-parent-badge-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      gap: 1.2rem;
+      width: 100%;
+    }
+    .ent-parent-white-logo {
+      width: 100% !important;
+      height: auto !important;
+      max-width: 240px;
+      object-fit: contain !important;
+      filter: invert(1) brightness(1.5) !important;
+      opacity: 0.9;
+      transform: none !important;
+      transition: opacity 0.4s ease, transform 0.6s cubic-bezier(0.16,1,0.3,1) !important;
+    }
+    .ent-entity-article.is-parent:hover .ent-parent-white-logo {
+      opacity: 1;
+      transform: scale(1.04) !important;
+    }
+    .ent-parent-badge-tag {
+      font-size: 0.62rem;
+      letter-spacing: 0.35rem;
+      color: rgba(255, 255, 255, 0.45);
+      text-transform: uppercase;
+      font-weight: 600;
+    }
 
     /* ── Metrics strip (dark, like ins-metrics-band) ── */
     .ent-metrics-band {
@@ -446,63 +553,6 @@
       text-transform: uppercase;
     }
 
-    /* ── Global Network ── */
-    .ent-global-section {
-      padding: 8rem 0;
-      background: var(--bg-primary);
-    }
-    .ent-global-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 7rem;
-      align-items: start;
-    }
-    .ent-global-left h2 {
-      font-size: clamp(2.2rem, 5vw, 3.8rem);
-      font-weight: 300;
-      letter-spacing: -0.08rem;
-      line-height: 1.1;
-      margin-bottom: 1.8rem;
-    }
-    .ent-global-left p {
-      font-size: 0.93rem;
-      font-weight: 300;
-      line-height: 1.95;
-      color: var(--text-secondary);
-      margin-bottom: 3rem;
-    }
-    .ent-loc-list {
-      list-style: none;
-      padding: 0; margin: 0;
-    }
-    .ent-loc-list li {
-      display: grid;
-      grid-template-columns: 32px 1fr auto;
-      gap: 1.2rem;
-      align-items: center;
-      padding: 1.2rem 0;
-      border-top: 1px solid rgba(26,26,26,0.1);
-      font-size: 0.85rem;
-      transition: var(--transition);
-    }
-    .ent-loc-list li:last-child { border-bottom: 1px solid rgba(26,26,26,0.1); }
-    .ent-loc-list li:hover { padding-left: 0.6rem; }
-    .ent-loc-idx { font-size: 0.6rem; letter-spacing: 0.2rem; font-weight: 600; opacity: 0.3; }
-    .ent-loc-city { font-weight: 500; letter-spacing: 0.03rem; }
-    .ent-loc-role { font-size: 0.75rem; color: var(--text-secondary); opacity: 0.6; }
-    .ent-global-map-wrap {
-      overflow: hidden;
-      position: sticky;
-      top: 8rem;
-    }
-    .ent-global-map-wrap img {
-      width: 100%;
-      display: block;
-      filter: grayscale(50%);
-      transition: filter 0.6s ease;
-    }
-    .ent-global-map-wrap:hover img { filter: grayscale(0%); }
-
     /* ── Closing CTA ── */
     .ent-cta-section {
       padding: 8rem 0;
@@ -543,12 +593,14 @@
     /* ── Responsive ── */
     @media (max-width: 1000px) {
       .ent-entity-article,
-      .ent-entity-article.reverse {
+      .ent-entity-article.reverse,
+      .ent-entity-article.is-parent {
         grid-template-columns: 50px 1fr;
+        grid-template-areas: "num info";
         gap: 2.5rem;
       }
-      .ent-entity-article.reverse .ent-art-num { order: 0; }
-      .ent-entity-article.reverse .ent-art-img-wrap,
+      .ent-entity-article.reverse .ent-art-num { text-align: left; }
+      .ent-entity-article.reverse .ent-art-info { margin-left: 0; max-width: 100%; }
       .ent-art-img-wrap { display: none; }
 
       .ent-entity-article.is-parent {
@@ -566,8 +618,7 @@
     }
     @media (max-width: 700px) {
       .ent-intro-grid,
-      .ent-pillars-top,
-      .ent-global-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .ent-pillars-top { grid-template-columns: 1fr; gap: 2.5rem; }
       .ent-pillars-grid,
       .ent-metrics-primary,
       .ent-metrics-secondary { grid-template-columns: 1fr 1fr; }
@@ -575,8 +626,8 @@
   </style>
 </head>
 
-<body class="subpage">
-  <header class="header scrolled" id="header">
+<body class="entities-page">
+  <header class="header" id="header">
     <nav class="nav container">
       <div class="nav-logo"><a href="index.html">NORBOND</a></div>
       <ul class="nav-links">
@@ -596,7 +647,6 @@
     <section class="ent-hero">
       <div class="ent-hero-bg"></div>
       <div class="ent-hero-overlay"></div>
-      <div class="ent-hero-bottom"></div>
       <div class="ent-hero-content container">
         <span class="section-tag reveal">CORPORATE STRUCTURE</span>
         <h1 class="reveal">Our<br><span class="highlight">Entities</span></h1>
@@ -622,13 +672,6 @@
       </div>
     </section>
 
-    <!-- ══════════════════════════════════════════
-         FULL-WIDTH IMAGE BREAK
-    ══════════════════════════════════════════ -->
-    <div class="ent-full-img reveal">
-      <img src="assets/Companynamepage.jpg" alt="Norbond Corporate Infrastructure">
-      <span class="ent-full-img-caption">Norbond Group · Corporate Operations</span>
-    </div>
 
     <!-- ══════════════════════════════════════════
          STRUCTURAL PILLARS — dark band
@@ -729,6 +772,12 @@
               </svg>
             </a>
           </div>
+          <div class="ent-art-img-wrap ent-parent-badge">
+            <div class="ent-parent-badge-inner">
+              <img src="assets/Norbond Black.png" alt="NORBOND" class="ent-parent-white-logo">
+              <span class="ent-parent-badge-tag">PARENT FRAMEWORK</span>
+            </div>
+          </div>
         </article>
 
         <!-- 02 — CORPORATE COTTON -->
@@ -758,12 +807,12 @@
               </svg>
             </a>
           </div>
-          <div class="ent-art-img-wrap">
-            <img src="assets/Homepage Category Home.jpg" alt="Corporate Cotton" class="ent-art-img">
+          <div class="ent-art-img-wrap ent-logo-img-wrap">
+            <img src="assets/Corporate Cotton Black.png" alt="Corporate Cotton" class="ent-art-img ent-logo-fit">
           </div>
         </article>
 
-        <!-- 03 — LUXE DECORA (reversed) -->
+        <!-- 03 — LUXE DECORA -->
         <article class="ent-entity-article reverse reveal-up">
           <span class="ent-art-num">03</span>
           <div class="ent-art-info">
@@ -790,8 +839,8 @@
               </svg>
             </a>
           </div>
-          <div class="ent-art-img-wrap">
-            <img src="assets/Signatures Luxe Decora.jpg" alt="Luxe Decora" class="ent-art-img">
+          <div class="ent-art-img-wrap ent-logo-img-wrap">
+            <img src="assets/Luxe Decora Logo.png" alt="Luxe Decora" class="ent-art-img ent-logo-fit">
           </div>
         </article>
 
@@ -822,8 +871,8 @@
               </svg>
             </a>
           </div>
-          <div class="ent-art-img-wrap">
-            <img src="assets/Signatures Fatbag.jpg" alt="Jumbble" class="ent-art-img">
+          <div class="ent-art-img-wrap ent-logo-img-wrap">
+            <img src="assets/Jumbble Logo Black.png" alt="Jumbble" class="ent-art-img ent-logo-fit">
           </div>
         </article>
       </div>
@@ -892,45 +941,7 @@
       </div>
     </section>
 
-    <!-- ══════════════════════════════════════════
-         GLOBAL NETWORK
-    ══════════════════════════════════════════ -->
-    <section class="ent-global-section" id="global">
-      <div class="container">
-        <div class="ent-global-grid">
-          <div class="ent-global-left reveal">
-            <span class="section-tag">GLOBAL REACH</span>
-            <h2>Where Our<br>Entities Operate</h2>
-            <p>Norbond's legal and operational presence spans four key regions — each chosen for its strategic importance to the group's industries and growth trajectory. Our geographic footprint is deliberate, structured, and expanding.</p>
-            <ul class="ent-loc-list">
-              <li>
-                <span class="ent-loc-idx">01</span>
-                <span class="ent-loc-city">Dubai, UAE</span>
-                <span class="ent-loc-role">Group Headquarters</span>
-              </li>
-              <li>
-                <span class="ent-loc-idx">02</span>
-                <span class="ent-loc-city">London, UK</span>
-                <span class="ent-loc-role">European Operations</span>
-              </li>
-              <li>
-                <span class="ent-loc-idx">03</span>
-                <span class="ent-loc-city">Moscow, Russia</span>
-                <span class="ent-loc-role">Strategic Distribution</span>
-              </li>
-              <li>
-                <span class="ent-loc-idx">04</span>
-                <span class="ent-loc-city">Kerala, India</span>
-                <span class="ent-loc-role">Heritage &amp; Supply Chain</span>
-              </li>
-            </ul>
-          </div>
-          <div class="ent-global-map-wrap reveal">
-            <img src="assets/Map.jpg" alt="Norbond Global Network">
-          </div>
-        </div>
-      </div>
-    </section>
+
 
     <!-- ══════════════════════════════════════════
          CLOSING CTA

@@ -1304,6 +1304,25 @@ img {
 .insights-page .header.scrolled .nav-logo a { color: var(--text-primary); }
 .insights-page .header.scrolled .nav-contact svg { stroke: var(--text-primary); }
 
+/* Entities page — transparent hero nav */
+.entities-page .header {
+  background: transparent;
+  border-bottom: none;
+  backdrop-filter: none;
+}
+.entities-page .nav-links a,
+.entities-page .nav-logo a { color: #fff; }
+.entities-page .nav-contact svg { stroke: #fff; }
+.entities-page .header.scrolled {
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+.entities-page .header.scrolled .nav-links a,
+.entities-page .header.scrolled .nav-logo a { color: var(--text-primary); }
+.entities-page .header.scrolled .nav-contact svg { stroke: var(--text-primary); }
+
 /* Hero */
 .ins-hero {
   position: relative;
