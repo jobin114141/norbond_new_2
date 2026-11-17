@@ -1,185 +1,1012 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ENTITIES | NORBOND</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@100;300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body class="subpage">
-    <header class="header scrolled" id="header">
-      <nav class="nav container">
-        <div class="nav-logo">
-          <a href="index.html">NORBOND</a>
-        </div>
-        <ul class="nav-links">
-          <li><a href="signatures.html">SIGNATURES</a></li>
-          <li><a href="entities.html">ENTITIES</a></li>
-          <li><a href="story.html">STORY</a></li>
-          <li><a href="insights.html">INSIGHTS</a></li>
-        </ul>
-      </nav>
-    </header>
 
-    <main>
-      <!-- Beautiful Typography Hero -->
-      <section class="portfolio-hero section" style="padding-top: 14rem; padding-bottom: 6rem; position: relative; overflow: hidden;">
-        <div class="container centered">
-          <!-- Background Watermark Text -->
-          <h1 class="reveal-up" style="font-size: clamp(6rem, 18vw, 12rem); font-weight: 900; letter-spacing: 1rem; opacity: 0.03; text-transform: uppercase; position: absolute; top: 30%; left: 50%; transform: translate(-50%, -50%); width: 100%; pointer-events: none; white-space: nowrap;">ENTERPRISE</h1>
-          
-          <!-- Foreground Content -->
-          <div style="position: relative; z-index: 2;">
-            <span class="section-tag reveal-up">OUR STRUCTURE</span>
-            <h1 class="section-title reveal-up" style="margin-bottom: 1.5rem; letter-spacing: 0.3rem;">OUR ENTITIES</h1>
-            <p class="reveal-up" style="max-width: 700px; margin: 0 auto; font-weight: 300; font-size: 1.1rem; opacity: 0.7; line-height: 1.8;">At Norbond, our global reach is supported by a network of diverse entities, each designed to enhance our operational efficiency and serve as the backbone of our multifaceted business.</p>
-          </div>
-        </div>
-      </section>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ENTITIES | NORBOND</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ============================================================
+       ENTITIES PAGE — CORPORATE EDITORIAL REDESIGN
+       ============================================================ */
 
-      <section class="entities-list section">
-        <div class="container centered">
-          
-          <!-- NORBOND ENTERPRISES -->
-          <div class="entity-block reveal-up active">
-            <h2 class="brand-title">NORBOND</h2>
-            <h3>NORBOND ENTERPRISES</h3>
-            <p>Norbond Enterprises is the core entity that oversees the management and strategic direction of all our brands. With a presence in key regions such as the UAE, UK, and India, Norbond Enterprises acts as the parent company, coordinating the operations and growth strategies of all affiliated brands and subsidiaries.</p>
-            <div class="entity-meta">
-              <span>Dubai, UAE</span> | <span>London, UK</span> | <span>Kochi, India</span>
-            </div>
-            <p class="meta-desc">Operations Headquartered in Kochi, India, Norbond Enterprises serves as the central hub for business development, innovation, and market expansion across Asia, Europe, and the Middle East.</p>
-          </div>
+    /* ── Hero ── */
+    .ent-hero {
+      position: relative;
+      height: 100vh;
+      min-height: 640px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background: #080808;
+    }
+    .ent-hero-bg {
+      position: absolute;
+      inset: 0;
+      background: url('assets/Entity - Banner.jpg') center / cover no-repeat;
+      filter: brightness(0.3) contrast(1.2);
+      transform: scale(1.07);
+      transition: transform 12s ease;
+      z-index: 1;
+    }
+    .ent-hero:hover .ent-hero-bg { transform: scale(1); }
+    .ent-hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(130deg, rgba(8,8,8,0.85) 0%, rgba(8,8,8,0.35) 55%, transparent 100%);
+      z-index: 2;
+    }
+    .ent-hero-bottom {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 220px;
+      background: linear-gradient(to bottom, transparent, var(--bg-primary));
+      z-index: 3;
+    }
+    .ent-hero-content {
+      position: relative;
+      z-index: 10;
+      color: #fff;
+      padding-top: 7rem;
+    }
+    .ent-hero-content .section-tag { color: rgba(255,255,255,0.45); margin-bottom: 1.8rem; }
+    .ent-hero-content h1 {
+      font-size: clamp(4rem, 11vw, 8.5rem);
+      font-weight: 100;
+      line-height: 0.9;
+      letter-spacing: -0.25rem;
+      margin-bottom: 2.5rem;
+      color: #fff;
+    }
+    .ent-hero-content h1 .highlight { font-style: italic; font-weight: 300; }
+    .ent-hero-sub {
+      font-size: 1rem;
+      font-weight: 300;
+      color: rgba(255,255,255,0.55);
+      max-width: 480px;
+      line-height: 1.9;
+    }
+    .ent-hero-line {
+      position: absolute;
+      bottom: 0; left: 50%;
+      transform: translateX(-50%);
+      width: 1px; height: 90px;
+      background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.3));
+      z-index: 10;
+    }
 
-          <div class="divider"></div>
+    /* ── Executive Intro (like story/insights intro grid) ── */
+    .ent-intro-section {
+      padding: 7rem 0 6rem;
+      background: var(--bg-primary);
+    }
+    .ent-intro-grid {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 5rem;
+      align-items: start;
+    }
+    .ent-intro-label .section-tag { margin-top: 0.4rem; }
+    .ent-intro-text p {
+      font-size: 1.15rem;
+      font-weight: 300;
+      line-height: 1.95;
+      color: var(--text-primary);
+      margin-bottom: 1.5rem;
+      opacity: 0.82;
+    }
+    .ent-intro-text p:last-child { margin-bottom: 0; }
 
-          <!-- CORPORATE COTTON -->
-          <div class="entity-block reveal-up active">
-            <div class="entity-icon" style="margin-bottom: 2rem;">
-              <svg viewBox="0 0 100 60" xmlns="http://www.w3.org/2000/svg" style="width: 100px; opacity: 0.8; margin: 0 auto;">
-                <path d="M10,50 L90,50 M30,50 L30,20 L70,20 L70,50 M40,20 L40,10 L60,10 L60,20" stroke="currentColor" fill="none" stroke-width="2"/>
-                <circle cx="75" cy="35" r="8" stroke="currentColor" fill="none" stroke-width="2"/>
-              </svg>
-            </div>
-            <h3>CORPORATE COTTON</h3>
-            <p>Specializing in the textile and fabric industry, Corporate Cotton is one of the key entities within the Norbond portfolio. Known for its sustainable and high-quality cotton products, Corporate Cotton provides the raw materials and fabric solutions used in several of our home and lifestyle brands.</p>
-            <div class="entity-meta">
-              <span>Dubai, UAE</span>
-            </div>
-            <p class="meta-desc">Based in Dubai, UAE, Corporate Cotton focuses on manufacturing and sourcing premium cotton fabrics, offering solutions for both local and international markets.</p>
-          </div>
+    /* ── Full-width image break ── */
+    .ent-full-img {
+      width: 100%;
+      height: 55vh;
+      min-height: 380px;
+      overflow: hidden;
+      position: relative;
+    }
+    .ent-full-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      filter: brightness(0.75) grayscale(20%);
+      transform: scale(1.04);
+      transition: transform 8s ease;
+    }
+    .ent-full-img:hover img { transform: scale(1); }
+    .ent-full-img-caption {
+      position: absolute;
+      bottom: 2rem; right: 3rem;
+      font-size: 0.65rem;
+      letter-spacing: 0.3rem;
+      color: rgba(255,255,255,0.45);
+      font-weight: 500;
+      text-transform: uppercase;
+    }
 
-          <div class="divider"></div>
+    /* ── Structure Pillars (dark band like story-journey) ── */
+    .ent-pillars-section {
+      background: #0a0a0a;
+      padding: 7rem 0;
+    }
+    .ent-pillars-top {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      margin-bottom: 5rem;
+    }
+    .ent-pillars-left .section-tag { color: rgba(255,255,255,0.4); }
+    .ent-pillars-left h2 {
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      font-weight: 300;
+      line-height: 1.1;
+      color: #fff;
+      letter-spacing: -0.08rem;
+      margin-top: 1rem;
+    }
+    .ent-pillars-right p {
+      font-size: 0.95rem;
+      font-weight: 300;
+      line-height: 1.95;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 1.2rem;
+    }
+    .ent-pillars-right p:last-child { margin-bottom: 0; }
+    .ent-pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+    .ent-pillar-card {
+      padding: 2.8rem 2rem 2.8rem 0;
+      border-right: 1px solid rgba(255,255,255,0.08);
+    }
+    .ent-pillar-card:last-child { border-right: none; padding-right: 0; }
+    .ent-pillar-card:not(:first-child) { padding-left: 2rem; }
+    .ent-pillar-num {
+      display: block;
+      font-size: 0.6rem;
+      letter-spacing: 0.3rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.3);
+      margin-bottom: 1.8rem;
+    }
+    .ent-pillar-icon {
+      width: 36px;
+      height: 36px;
+      margin-bottom: 1.5rem;
+      opacity: 0.5;
+    }
+    .ent-pillar-title {
+      font-size: 1rem;
+      font-weight: 500;
+      color: #fff;
+      letter-spacing: 0.05rem;
+      margin-bottom: 0.8rem;
+    }
+    .ent-pillar-desc {
+      font-size: 0.82rem;
+      font-weight: 300;
+      color: rgba(255,255,255,0.4);
+      line-height: 1.8;
+    }
 
-          <!-- LUXE DECORA INC LTD -->
-          <div class="entity-block reveal-up active">
-            <div class="entity-icon" style="margin-bottom: 2rem;">
-              <img src="assets/Luxe Decora Logo.png" alt="Luxe Decora Logo" style="width: 150px; filter: grayscale(100%); margin: 0 auto;">
-            </div>
-            <h3>LUXE DECORA INC LTD</h3>
-            <p>Luxe Decora INC Ltd is the official corporate entity behind the Luxe Decora brand, a leader in premium home décor and lifestyle products. This entity handles everything from design and production to distribution and marketing of Luxe Decora's curated collections.</p>
-            <div class="entity-meta">
-              <span>London, UK</span>
-            </div>
-            <p class="meta-desc">Located in London, UK, Luxe Decora INC Ltd ensures that the brand's luxurious vision and dedication to quality is carried out in all regions, blending British craftsmanship with international expertise.</p>
-          </div>
+    /* ── Entity Detail Rows (like ins-report-row) ── */
+    .ent-entities-section {
+      padding: 8rem 0;
+      background: var(--bg-primary);
+    }
+    .ent-entities-header {
+      margin-bottom: 6rem;
+    }
 
-          <div class="divider"></div>
+    .ent-entity-article {
+      display: grid;
+      grid-template-columns: 80px 1fr 400px;
+      gap: 5rem;
+      align-items: start;
+      padding: 5rem 0;
+      border-top: 1px solid rgba(26,26,26,0.1);
+      transition: var(--transition);
+    }
+    .ent-entity-article:last-child { border-bottom: 1px solid rgba(26,26,26,0.1); }
+    .ent-entity-article.reverse {
+      grid-template-columns: 400px 1fr 80px;
+    }
+    .ent-entity-article.reverse .ent-art-num { order: 3; text-align: right; }
+    .ent-entity-article.reverse .ent-art-img-wrap { order: 1; }
+    .ent-entity-article.reverse .ent-art-info { order: 2; }
 
-          <!-- JUMBBLE -->
-          <div class="entity-block reveal-up active">
-            <div class="entity-icon" style="margin-bottom: 2rem; text-align: center;">
-              <h2 style="font-weight: 900; letter-spacing: -0.05rem; font-size: 3rem; margin: 0; display: inline-block;">Jumbble</h2>
-            </div>
-            <h3>JUMBBLE GIFTS TRADING CO LLC</h3>
-            <p>Jumbble Gifts Trading Co LLC is the entity responsible for managing the Jumbble brand, specializing in premium bean bags and seating solutions. This entity coordinates the design, manufacturing, and distribution of Jumbble's wide range of products.</p>
-            <div class="entity-meta">
-              <span>Dubai, UAE</span>
-            </div>
-            <p class="meta-desc">Headquartered in Dubai, UAE, Jumbble Gifts Trading Co LLC oversees operations across the Middle East and other global markets, ensuring each bean bag design upholds the brand's commitment to quality and comfort.</p>
-          </div>
+    .ent-art-num {
+      font-size: 0.6rem;
+      letter-spacing: 0.3rem;
+      font-weight: 600;
+      opacity: 0.3;
+      padding-top: 0.6rem;
+    }
+    .ent-art-info {}
+    .ent-art-logo {
+      height: 32px;
+      width: auto;
+      max-width: 150px;
+      object-fit: contain;
+      object-position: left;
+      filter: grayscale(100%);
+      opacity: 0.65;
+      margin-bottom: 2rem;
+      display: block;
+    }
+    .ent-art-cat {
+      display: block;
+      font-size: 0.65rem;
+      letter-spacing: 0.35rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      margin-bottom: 1rem;
+      opacity: 0.6;
+    }
+    .ent-art-title {
+      font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+      font-weight: 300;
+      letter-spacing: -0.04rem;
+      line-height: 1.15;
+      margin-bottom: 1.5rem;
+    }
+    .ent-art-desc {
+      font-size: 0.93rem;
+      font-weight: 300;
+      line-height: 1.95;
+      color: var(--text-secondary);
+      margin-bottom: 1.8rem;
+      max-width: 420px;
+    }
+    .ent-art-bullets {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+    .ent-art-bullets li {
+      font-size: 0.82rem;
+      font-weight: 300;
+      color: var(--text-secondary);
+      padding-left: 1.2rem;
+      position: relative;
+      line-height: 1.6;
+    }
+    .ent-art-bullets li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.5em;
+      width: 5px;
+      height: 1px;
+      background: var(--text-secondary);
+      opacity: 0.5;
+    }
+    .ent-art-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+    }
+    .ent-art-tag {
+      font-size: 0.6rem;
+      letter-spacing: 0.2rem;
+      font-weight: 600;
+      padding: 0.3rem 0.8rem;
+      border: 1px solid rgba(26,26,26,0.18);
+      color: var(--text-secondary);
+      text-transform: uppercase;
+    }
+    .ent-art-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.75rem;
+      letter-spacing: 0.15rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      border-bottom: 1px solid rgba(26,26,26,0.3);
+      padding-bottom: 2px;
+      transition: var(--transition);
+    }
+    .ent-art-link:hover { opacity: 0.6; gap: 1rem; }
+    .ent-art-img-wrap {
+      overflow: hidden;
+      aspect-ratio: 3/4;
+    }
+    .ent-art-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      filter: grayscale(25%);
+      transition: transform 0.9s cubic-bezier(0.16,1,0.3,1), filter 0.6s ease;
+    }
+    .ent-entity-article:hover .ent-art-img { transform: scale(1.04); filter: grayscale(0%); }
 
-        </div>
-      </section>
+    /* parent entity — dark accent */
+    .ent-entity-article.is-parent {
+      background: #0a0a0a;
+      padding-left: 3.5rem;
+      padding-right: 3.5rem;
+      margin: 0 -2rem;
+      width: calc(100% + 4rem);
+      border-top-color: transparent;
+    }
+    .ent-entity-article.is-parent .ent-art-num,
+    .ent-entity-article.is-parent .ent-art-cat { color: rgba(255,255,255,0.35); opacity: 1; }
+    .ent-entity-article.is-parent .ent-art-title { color: #fff; }
+    .ent-entity-article.is-parent .ent-art-desc,
+    .ent-entity-article.is-parent .ent-art-bullets li { color: rgba(255,255,255,0.45); }
+    .ent-entity-article.is-parent .ent-art-bullets li::before { background: rgba(255,255,255,0.4); }
+    .ent-entity-article.is-parent .ent-art-tag { border-color: rgba(255,255,255,0.15); color: rgba(255,255,255,0.4); }
+    .ent-entity-article.is-parent .ent-art-link { color: rgba(255,255,255,0.7); border-bottom-color: rgba(255,255,255,0.25); }
+    .ent-entity-article.is-parent .ent-art-logo { filter: grayscale(100%) invert(1); opacity: 0.55; }
+    .ent-entity-article.is-parent + .ent-entity-article { border-top-color: rgba(26,26,26,0.1); }
 
-      <!-- GLOBAL NETWORK Section -->
-      <section class="global-network section reveal-up active">
-        <div class="container centered">
-          <span class="section-tag">GLOBAL REACH</span>
-          <h2 class="section-title">Our Global Network</h2>
-          <p class="section-subtitle">Our diverse legal entities are strategically located in key regions around the world, ensuring that Norbond's reach extends across multiple continents.</p>
-          
-          <div class="network-map">
-            <img src="assets/map.png" alt="World Map">
-          </div>
-        </div>
-      </section>
-    </main>
+    /* ── Metrics strip (dark, like ins-metrics-band) ── */
+    .ent-metrics-band {
+      background: #0a0a0a;
+      padding: 7rem 0;
+    }
+    .ent-metrics-band .section-tag { color: rgba(255,255,255,0.4); }
+    .ent-metrics-band .section-title { color: #fff; }
+    .ent-metrics-primary {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      margin-top: 4rem;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+    .ent-metric-card {
+      padding: 3rem 2rem 3rem 0;
+      border-right: 1px solid rgba(255,255,255,0.08);
+    }
+    .ent-metric-card:last-child { border-right: none; padding-right: 0; }
+    .ent-metric-card:not(:first-child) { padding-left: 2rem; }
+    .ent-metric-val {
+      display: block;
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 100;
+      line-height: 1;
+      color: #fff;
+      letter-spacing: -0.1rem;
+      margin-bottom: 1rem;
+    }
+    .ent-metric-lbl {
+      display: block;
+      font-size: 0.65rem;
+      letter-spacing: 0.3rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.35);
+      text-transform: uppercase;
+    }
+    .ent-metrics-secondary {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      margin-top: 0;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+    .ent-metric-card-sm {
+      padding: 2rem 2rem 2rem 0;
+      border-right: 1px solid rgba(255,255,255,0.06);
+    }
+    .ent-metric-card-sm:last-child { border-right: none; padding-right: 0; }
+    .ent-metric-card-sm:not(:first-child) { padding-left: 2rem; }
+    .ent-metric-card-sm .ent-metric-val { font-size: clamp(1.6rem, 3vw, 2.4rem); color: rgba(255,255,255,0.65); }
+    .ent-metric-card-sm .ent-metric-lbl { color: rgba(255,255,255,0.25); }
 
-    <footer class="footer" id="contact">
-      <div class="container footer-top-grid">
-        <div class="footer-brand">
-          <span class="footer-tag">PARENT FRAMEWORK</span>
-          <a href="index.html" class="footer-logo">NORBOND</a>
-          <p class="footer-desc">Home of Exquisite Brands. Defining luxury, architectural elegance, and artisanal heritage across global frontiers.</p>
-          <a href="mailto:info@norbond.com" class="footer-email-link">info@norbond.com</a>
-        </div>
+    /* ── Executive Quote (dark pullquote) ── */
+    .ent-quote-section {
+      background: #0a0a0a;
+      padding: 6rem 0 7rem;
+    }
+    .ent-quote-box {
+      max-width: 820px;
+      margin: 0 auto;
+      text-align: center;
+      padding: 0 2rem;
+    }
+    .ent-quote-mark {
+      display: block;
+      font-size: 5rem;
+      line-height: 0.8;
+      color: rgba(255,255,255,0.08);
+      font-family: Georgia, serif;
+      margin-bottom: 1.5rem;
+    }
+    .ent-quote-text {
+      font-size: clamp(1.3rem, 2.5vw, 2rem);
+      font-weight: 300;
+      line-height: 1.6;
+      color: rgba(255,255,255,0.75);
+      font-style: italic;
+      letter-spacing: -0.02rem;
+      border: none;
+      padding: 0;
+      margin: 0 0 2rem;
+    }
+    .ent-quote-author {
+      display: block;
+      font-size: 0.65rem;
+      letter-spacing: 0.35rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.3);
+      text-transform: uppercase;
+    }
 
-        <div class="footer-links">
-          <h4 class="footer-col-title">PORTFOLIO</h4>
-          <ul class="footer-nav-list">
-            <li><a href="signatures.html">Signatures</a></li>
-            <li><a href="entities.html">Entities</a></li>
-            <li><a href="story.html">Our Story</a></li>
-            <li><a href="index.html#global">Global Network</a></li>
-          </ul>
-        </div>
+    /* ── Global Network ── */
+    .ent-global-section {
+      padding: 8rem 0;
+      background: var(--bg-primary);
+    }
+    .ent-global-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 7rem;
+      align-items: start;
+    }
+    .ent-global-left h2 {
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      font-weight: 300;
+      letter-spacing: -0.08rem;
+      line-height: 1.1;
+      margin-bottom: 1.8rem;
+    }
+    .ent-global-left p {
+      font-size: 0.93rem;
+      font-weight: 300;
+      line-height: 1.95;
+      color: var(--text-secondary);
+      margin-bottom: 3rem;
+    }
+    .ent-loc-list {
+      list-style: none;
+      padding: 0; margin: 0;
+    }
+    .ent-loc-list li {
+      display: grid;
+      grid-template-columns: 32px 1fr auto;
+      gap: 1.2rem;
+      align-items: center;
+      padding: 1.2rem 0;
+      border-top: 1px solid rgba(26,26,26,0.1);
+      font-size: 0.85rem;
+      transition: var(--transition);
+    }
+    .ent-loc-list li:last-child { border-bottom: 1px solid rgba(26,26,26,0.1); }
+    .ent-loc-list li:hover { padding-left: 0.6rem; }
+    .ent-loc-idx { font-size: 0.6rem; letter-spacing: 0.2rem; font-weight: 600; opacity: 0.3; }
+    .ent-loc-city { font-weight: 500; letter-spacing: 0.03rem; }
+    .ent-loc-role { font-size: 0.75rem; color: var(--text-secondary); opacity: 0.6; }
+    .ent-global-map-wrap {
+      overflow: hidden;
+      position: sticky;
+      top: 8rem;
+    }
+    .ent-global-map-wrap img {
+      width: 100%;
+      display: block;
+      filter: grayscale(50%);
+      transition: filter 0.6s ease;
+    }
+    .ent-global-map-wrap:hover img { filter: grayscale(0%); }
 
-        <div class="footer-links">
-          <h4 class="footer-col-title">PEOPLES</h4>
-          <ul class="footer-nav-list">
-            <li><a href="#">Commitment</a></li>
-            <li><a href="#">Work Environment</a></li>
-            <li><a href="#">Work With Us</a></li>
-            <li><a href="#">Ethics &amp; Integrity</a></li>
-          </ul>
-        </div>
+    /* ── Closing CTA ── */
+    .ent-cta-section {
+      padding: 8rem 0;
+      background: var(--bg-primary);
+      border-top: 1px solid rgba(26,26,26,0.1);
+      text-align: center;
+    }
+    .ent-cta-heading {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 300;
+      letter-spacing: -0.08rem;
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+    }
+    .ent-cta-sub {
+      font-size: 0.95rem;
+      font-weight: 300;
+      line-height: 1.9;
+      color: var(--text-secondary);
+      max-width: 560px;
+      margin: 0 auto 3rem;
+    }
+    .ent-cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.8rem;
+      font-size: 0.75rem;
+      letter-spacing: 0.2rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      padding: 1rem 2.2rem;
+      background: var(--text-primary);
+      color: var(--bg-primary);
+      transition: var(--transition);
+    }
+    .ent-cta-btn:hover { opacity: 0.75; gap: 1.3rem; }
 
-        <div class="footer-links">
-          <h4 class="footer-col-title">WORLD</h4>
-          <ul class="footer-nav-list">
-            <li><a href="index.html#contact">Contact</a></li>
-            <li><a href="insights.html">Insights</a></li>
-            <li><a href="#">Terms of Use</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-          </ul>
-        </div>
+    /* ── Responsive ── */
+    @media (max-width: 1000px) {
+      .ent-entity-article,
+      .ent-entity-article.reverse {
+        grid-template-columns: 50px 1fr;
+        gap: 2.5rem;
+      }
+      .ent-entity-article.reverse .ent-art-num { order: 0; }
+      .ent-entity-article.reverse .ent-art-img-wrap,
+      .ent-art-img-wrap { display: none; }
+
+      .ent-entity-article.is-parent {
+        margin: 0 -1rem;
+        width: calc(100% + 2rem);
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+      }
+      .ent-pillars-grid,
+      .ent-metrics-primary,
+      .ent-metrics-secondary { grid-template-columns: 1fr 1fr; }
+      .ent-pillar-card,
+      .ent-metric-card,
+      .ent-metric-card-sm { border-right: none; padding-left: 0 !important; }
+    }
+    @media (max-width: 700px) {
+      .ent-intro-grid,
+      .ent-pillars-top,
+      .ent-global-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .ent-pillars-grid,
+      .ent-metrics-primary,
+      .ent-metrics-secondary { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+
+<body class="subpage">
+  <header class="header scrolled" id="header">
+    <nav class="nav container">
+      <div class="nav-logo"><a href="index.html">NORBOND</a></div>
+      <ul class="nav-links">
+        <li><a href="signatures.html">SIGNATURES</a></li>
+        <li><a href="entities.html" class="active">ENTITIES</a></li>
+        <li><a href="story.html">STORY</a></li>
+        <li><a href="insights.html">INSIGHTS</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ══════════════════════════════════════════
+         HERO
+    ══════════════════════════════════════════ -->
+    <section class="ent-hero">
+      <div class="ent-hero-bg"></div>
+      <div class="ent-hero-overlay"></div>
+      <div class="ent-hero-bottom"></div>
+      <div class="ent-hero-content container">
+        <span class="section-tag reveal">CORPORATE STRUCTURE</span>
+        <h1 class="reveal">Our<br><span class="highlight">Entities</span></h1>
+        <p class="ent-hero-sub reveal">At Norbond, our global reach is supported by a network of distinct legal entities — each carrying a precise mandate and operating at the frontier of its industry.</p>
       </div>
+      <div class="ent-hero-line"></div>
+    </section>
 
-      <!-- Huge Typography Proximity Section -->
+    <!-- ══════════════════════════════════════════
+         EXECUTIVE INTRO
+    ══════════════════════════════════════════ -->
+    <section class="ent-intro-section">
       <div class="container">
-        <div class="wv-huge-typography-wrapper" id="waveyuHugeTypography">
-          <span class="wv-char">N</span>
-          <span class="wv-char">O</span>
-          <span class="wv-char">R</span>
-          <span class="wv-char">B</span>
-          <span class="wv-char">O</span>
-          <span class="wv-char">N</span>
-          <span class="wv-char">D</span>
+        <div class="ent-intro-grid reveal-up">
+          <div class="ent-intro-label">
+            <span class="section-tag">OUR FRAMEWORK</span>
+          </div>
+          <div class="ent-intro-text">
+            <p>At Norbond, we believe that structural clarity is the foundation of enduring excellence. Each entity within our ecosystem is established not merely as a legal formality, but as a purposefully designed operational pillar — with its own culture, mandate, and market focus.</p>
+            <p>From our parent framework headquartered in Dubai to our European luxury operations in London, every entity contributes a distinct and irreplaceable strand to the broader Norbond fabric. This disciplined architecture allows us to move with agility at scale — responding to markets without compromising on the integrity that defines us.</p>
+          </div>
         </div>
       </div>
+    </section>
 
-      <div class="footer-bottom container">
-        <p>&copy; 2026 Norbond Enterprises. All rights reserved.</p>
-        <div class="footer-bottom-locations">
-          <span>Dubai</span> &bull; <span>London</span> &bull; <span>Moscow</span> &bull; <span>Kerala</span>
+    <!-- ══════════════════════════════════════════
+         FULL-WIDTH IMAGE BREAK
+    ══════════════════════════════════════════ -->
+    <div class="ent-full-img reveal">
+      <img src="assets/Companynamepage.jpg" alt="Norbond Corporate Infrastructure">
+      <span class="ent-full-img-caption">Norbond Group · Corporate Operations</span>
+    </div>
+
+    <!-- ══════════════════════════════════════════
+         STRUCTURAL PILLARS — dark band
+    ══════════════════════════════════════════ -->
+    <section class="ent-pillars-section">
+      <div class="container">
+        <div class="ent-pillars-top reveal-up">
+          <div class="ent-pillars-left">
+            <span class="section-tag">WHAT GOVERNS US</span>
+            <h2>Four Pillars of<br>Corporate Excellence</h2>
+          </div>
+          <div class="ent-pillars-right">
+            <p>The Norbond entity structure is governed by four operating principles that ensure every subsidiary inherits the same standard of discipline, creativity, and accountability that the parent group embodies.</p>
+            <p>These pillars are not guidelines — they are non-negotiable commitments embedded into the governance of each entity from inception to operation.</p>
+          </div>
+        </div>
+
+        <div class="ent-pillars-grid reveal-up">
+          <div class="ent-pillar-card">
+            <span class="ent-pillar-num">01</span>
+            <svg class="ent-pillar-icon" viewBox="0 0 36 36" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.2">
+              <rect x="6" y="6" width="24" height="24" rx="0"/>
+              <line x1="6" y1="14" x2="30" y2="14"/>
+              <line x1="14" y1="14" x2="14" y2="30"/>
+            </svg>
+            <div class="ent-pillar-title">Structural Clarity</div>
+            <p class="ent-pillar-desc">Every entity operates within a precisely defined mandate — no ambiguity, no overlap, no compromise on role.</p>
+          </div>
+          <div class="ent-pillar-card">
+            <span class="ent-pillar-num">02</span>
+            <svg class="ent-pillar-icon" viewBox="0 0 36 36" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.2">
+              <circle cx="18" cy="18" r="12"/>
+              <line x1="18" y1="6" x2="18" y2="18"/>
+              <line x1="18" y1="18" x2="26" y2="22"/>
+            </svg>
+            <div class="ent-pillar-title">Operational Agility</div>
+            <p class="ent-pillar-desc">Each entity can pivot independently while remaining anchored to group-wide strategy and capital resources.</p>
+          </div>
+          <div class="ent-pillar-card">
+            <span class="ent-pillar-num">03</span>
+            <svg class="ent-pillar-icon" viewBox="0 0 36 36" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.2">
+              <polyline points="6,30 14,18 22,24 30,10"/>
+              <circle cx="6" cy="30" r="2" fill="rgba(255,255,255,0.6)" stroke="none"/>
+              <circle cx="30" cy="10" r="2" fill="rgba(255,255,255,0.6)" stroke="none"/>
+            </svg>
+            <div class="ent-pillar-title">Growth Integrity</div>
+            <p class="ent-pillar-desc">Expansion is measured, not rushed — quality and reputation precede scale in every market we enter.</p>
+          </div>
+          <div class="ent-pillar-card">
+            <span class="ent-pillar-num">04</span>
+            <svg class="ent-pillar-icon" viewBox="0 0 36 36" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.2">
+              <path d="M18 6 L30 12 L30 24 L18 30 L6 24 L6 12 Z"/>
+              <circle cx="18" cy="18" r="4"/>
+            </svg>
+            <div class="ent-pillar-title">Brand Sovereignty</div>
+            <p class="ent-pillar-desc">Each entity preserves its own identity and consumer relationship while drawing power from the Norbond ecosystem.</p>
+          </div>
         </div>
       </div>
-    </footer>
+    </section>
 
-    <script src="script.js"></script>
-  </body>
+    <!-- ══════════════════════════════════════════
+         ENTITY DETAILS — editorial rows
+    ══════════════════════════════════════════ -->
+    <section class="ent-entities-section">
+      <div class="container">
+        <div class="ent-entities-header">
+          <div class="section-header reveal">
+            <span class="section-tag">LEGAL ENTITIES</span>
+            <h2 class="section-title">The Norbond Portfolio</h2>
+          </div>
+        </div>
+
+        <!-- 01 — NORBOND ENTERPRISES (parent — dark) -->
+        <article class="ent-entity-article is-parent reveal-up">
+          <span class="ent-art-num">01</span>
+          <div class="ent-art-info">
+            <img src="assets/Norbond Black.png" alt="Norbond" class="ent-art-logo">
+            <span class="ent-art-cat">Parent Entity · Multi-Regional</span>
+            <h3 class="ent-art-title">Norbond Enterprises —<br>The Parent Framework</h3>
+            <p class="ent-art-desc">Norbond Enterprises is the apex entity that oversees the strategic direction, governance, and long-term development of all subsidiary brands. With a commanding presence across the UAE, UK, and India, it functions as the nerve center of the entire group.</p>
+            <ul class="ent-art-bullets">
+              <li>Group-level strategy, capital deployment, and brand incubation</li>
+              <li>Headquarters in Dubai; operations coordinated from Kochi, India</li>
+              <li>Responsible for cross-entity synergy and enterprise governance</li>
+              <li>Sets the quality, ethical, and innovation standards for the portfolio</li>
+            </ul>
+            <div class="ent-art-tags">
+              <span class="ent-art-tag">Dubai, UAE</span>
+              <span class="ent-art-tag">London, UK</span>
+              <span class="ent-art-tag">Kochi, India</span>
+            </div>
+            <a href="story.html" class="ent-art-link">
+              Our Corporate Story
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- 02 — CORPORATE COTTON -->
+        <article class="ent-entity-article reveal-up">
+          <span class="ent-art-num">02</span>
+          <div class="ent-art-info">
+            <img src="assets/Corporate Cotton Black.png" alt="Corporate Cotton" class="ent-art-logo">
+            <span class="ent-art-cat">Textile & Materials · Dubai, UAE</span>
+            <h3 class="ent-art-title">Corporate Cotton —<br>Textile Excellence</h3>
+            <p class="ent-art-desc">Specializing in the textile and fabric industry, Corporate Cotton is a cornerstone of the Norbond supply chain. Known for its sustainable and high-quality cotton products, it delivers raw materials and fabric solutions that underpin several of our home and lifestyle brands.</p>
+            <ul class="ent-art-bullets">
+              <li>Premium cotton sourcing and manufacturing for global markets</li>
+              <li>End-to-end fabric solutions from raw fibre to finished textile</li>
+              <li>Ethical sourcing and sustainability at the core of operations</li>
+              <li>Key supplier to Norbond's home décor and lifestyle verticals</li>
+            </ul>
+            <div class="ent-art-tags">
+              <span class="ent-art-tag">Dubai, UAE</span>
+              <span class="ent-art-tag">Textiles</span>
+              <span class="ent-art-tag">Materials</span>
+            </div>
+            <a href="signatures.html" class="ent-art-link">
+              View Portfolio
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+          <div class="ent-art-img-wrap">
+            <img src="assets/Homepage Category Home.jpg" alt="Corporate Cotton" class="ent-art-img">
+          </div>
+        </article>
+
+        <!-- 03 — LUXE DECORA (reversed) -->
+        <article class="ent-entity-article reverse reveal-up">
+          <span class="ent-art-num">03</span>
+          <div class="ent-art-info">
+            <img src="assets/Luxe Decora Logo.png" alt="Luxe Decora" class="ent-art-logo">
+            <span class="ent-art-cat">Home Décor & Lifestyle · London, UK</span>
+            <h3 class="ent-art-title">Luxe Decora INC Ltd —<br>Premium Living</h3>
+            <p class="ent-art-desc">Luxe Decora INC Ltd is the official corporate entity behind one of Norbond's most distinguished brands. A leader in premium home décor and lifestyle products, it handles everything from design and production to global distribution and marketing of Luxe Decora's curated collections.</p>
+            <ul class="ent-art-bullets">
+              <li>British craftsmanship merged with international luxury expertise</li>
+              <li>End-to-end control of design, production, and distribution</li>
+              <li>Positioned at the intersection of architecture and domestic elegance</li>
+              <li>Flagship European operations anchoring Norbond's western presence</li>
+            </ul>
+            <div class="ent-art-tags">
+              <span class="ent-art-tag">London, UK</span>
+              <span class="ent-art-tag">Home Décor</span>
+              <span class="ent-art-tag">Lifestyle</span>
+            </div>
+            <a href="signatures.html" class="ent-art-link">
+              Explore Luxe Decora
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+          <div class="ent-art-img-wrap">
+            <img src="assets/Signatures Luxe Decora.jpg" alt="Luxe Decora" class="ent-art-img">
+          </div>
+        </article>
+
+        <!-- 04 — JUMBBLE GIFTS -->
+        <article class="ent-entity-article reveal-up">
+          <span class="ent-art-num">04</span>
+          <div class="ent-art-info">
+            <img src="assets/Jumbble Logo Black.png" alt="Jumbble" class="ent-art-logo">
+            <span class="ent-art-cat">Seating & Lifestyle Products · Dubai, UAE</span>
+            <h3 class="ent-art-title">Jumbble Gifts Trading Co LLC —<br>Comfort Redefined</h3>
+            <p class="ent-art-desc">Jumbble Gifts Trading Co LLC manages the Jumbble brand — a specialist in premium bean bags and innovative seating solutions. This entity coordinates design, manufacturing, and distribution across the Middle East and global markets, ensuring each product upholds Norbond's uncompromising quality standards.</p>
+            <ul class="ent-art-bullets">
+              <li>Premium bean bag and modular seating design for modern spaces</li>
+              <li>End-to-end supply chain from production facilities to retail distribution</li>
+              <li>Market leadership in the UAE and GCC lifestyle seating segment</li>
+              <li>Ongoing expansion into European and South Asian consumer markets</li>
+            </ul>
+            <div class="ent-art-tags">
+              <span class="ent-art-tag">Dubai, UAE</span>
+              <span class="ent-art-tag">Seating</span>
+              <span class="ent-art-tag">Lifestyle</span>
+            </div>
+            <a href="signatures.html" class="ent-art-link">
+              Explore Jumbble
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+          <div class="ent-art-img-wrap">
+            <img src="assets/Signatures Fatbag.jpg" alt="Jumbble" class="ent-art-img">
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         METRICS BAND — dark
+    ══════════════════════════════════════════ -->
+    <section class="ent-metrics-band">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <span class="section-tag">OPERATIONAL SCALE</span>
+          <h2 class="section-title">The Numbers That Define Us</h2>
+        </div>
+        <div class="ent-metrics-primary reveal-up">
+          <div class="ent-metric-card">
+            <span class="ent-metric-val">04</span>
+            <span class="ent-metric-lbl">Legal Entities</span>
+          </div>
+          <div class="ent-metric-card">
+            <span class="ent-metric-val">04</span>
+            <span class="ent-metric-lbl">Operating Nations</span>
+          </div>
+          <div class="ent-metric-card">
+            <span class="ent-metric-val">05</span>
+            <span class="ent-metric-lbl">Industries Spanned</span>
+          </div>
+          <div class="ent-metric-card">
+            <span class="ent-metric-val">10+</span>
+            <span class="ent-metric-lbl">Strategic Partners</span>
+          </div>
+        </div>
+        <div class="ent-metrics-secondary reveal-up">
+          <div class="ent-metric-card-sm">
+            <span class="ent-metric-val">5k+</span>
+            <span class="ent-metric-lbl">Catalog Items</span>
+          </div>
+          <div class="ent-metric-card-sm">
+            <span class="ent-metric-val">25+</span>
+            <span class="ent-metric-lbl">Supply Regions</span>
+          </div>
+          <div class="ent-metric-card-sm">
+            <span class="ent-metric-val">100%</span>
+            <span class="ent-metric-lbl">Traceable Supply</span>
+          </div>
+          <div class="ent-metric-card-sm">
+            <span class="ent-metric-val">∞</span>
+            <span class="ent-metric-lbl">Commitment to Quality</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         EXECUTIVE QUOTE
+    ══════════════════════════════════════════ -->
+    <section class="ent-quote-section">
+      <div class="container">
+        <div class="ent-quote-box reveal-up">
+          <span class="ent-quote-mark">"</span>
+          <blockquote class="ent-quote-text">
+            "A conglomerate is only as strong as the entities that compose it. At Norbond, every subsidiary is built not for convenience, but for conviction — a deliberate commitment to a craft, a market, and a standard."
+          </blockquote>
+          <span class="ent-quote-author">Norbond Board of Governance &middot; Strategic Charter</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         GLOBAL NETWORK
+    ══════════════════════════════════════════ -->
+    <section class="ent-global-section" id="global">
+      <div class="container">
+        <div class="ent-global-grid">
+          <div class="ent-global-left reveal">
+            <span class="section-tag">GLOBAL REACH</span>
+            <h2>Where Our<br>Entities Operate</h2>
+            <p>Norbond's legal and operational presence spans four key regions — each chosen for its strategic importance to the group's industries and growth trajectory. Our geographic footprint is deliberate, structured, and expanding.</p>
+            <ul class="ent-loc-list">
+              <li>
+                <span class="ent-loc-idx">01</span>
+                <span class="ent-loc-city">Dubai, UAE</span>
+                <span class="ent-loc-role">Group Headquarters</span>
+              </li>
+              <li>
+                <span class="ent-loc-idx">02</span>
+                <span class="ent-loc-city">London, UK</span>
+                <span class="ent-loc-role">European Operations</span>
+              </li>
+              <li>
+                <span class="ent-loc-idx">03</span>
+                <span class="ent-loc-city">Moscow, Russia</span>
+                <span class="ent-loc-role">Strategic Distribution</span>
+              </li>
+              <li>
+                <span class="ent-loc-idx">04</span>
+                <span class="ent-loc-city">Kerala, India</span>
+                <span class="ent-loc-role">Heritage &amp; Supply Chain</span>
+              </li>
+            </ul>
+          </div>
+          <div class="ent-global-map-wrap reveal">
+            <img src="assets/Map.jpg" alt="Norbond Global Network">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         CLOSING CTA
+    ══════════════════════════════════════════ -->
+    <section class="ent-cta-section">
+      <div class="container reveal-up">
+        <span class="section-tag" style="text-align:center; display:block;">EXPLORE FURTHER</span>
+        <h2 class="ent-cta-heading">Beyond the Structure —<br>Discover the Brands</h2>
+        <p class="ent-cta-sub">Each entity is a steward of one or more of Norbond's signature brands. Explore the full portfolio of collections that our corporate architecture exists to serve.</p>
+        <a href="signatures.html" class="ent-cta-btn">
+          View Signature Brands
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════════════════════════════════════
+       FOOTER (unified)
+  ══════════════════════════════════════════ -->
+  <footer class="footer" id="contact">
+    <div class="container footer-top-grid">
+      <div class="footer-brand">
+        <span class="footer-tag">PARENT FRAMEWORK</span>
+        <a href="index.html" class="footer-logo">NORBOND</a>
+        <p class="footer-desc">Home of Exquisite Brands. Defining luxury, architectural elegance, and artisanal heritage across global frontiers.</p>
+        <a href="mailto:info@norbond.com" class="footer-email-link">info@norbond.com</a>
+      </div>
+      <div class="footer-links">
+        <h4 class="footer-col-title">PORTFOLIO</h4>
+        <ul class="footer-nav-list">
+          <li><a href="signatures.html">Signatures</a></li>
+          <li><a href="entities.html">Entities</a></li>
+          <li><a href="story.html">Our Story</a></li>
+          <li><a href="index.html#global">Global Network</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4 class="footer-col-title">PEOPLES</h4>
+        <ul class="footer-nav-list">
+          <li><a href="#">Commitment</a></li>
+          <li><a href="#">Work Environment</a></li>
+          <li><a href="#">Work With Us</a></li>
+          <li><a href="#">Ethics &amp; Integrity</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4 class="footer-col-title">WORLD</h4>
+        <ul class="footer-nav-list">
+          <li><a href="index.html#contact">Contact</a></li>
+          <li><a href="insights.html">Insights</a></li>
+          <li><a href="#">Terms of Use</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <div class="wv-huge-typography-wrapper" id="waveyuHugeTypography">
+        <span class="wv-char">N</span><span class="wv-char">O</span><span class="wv-char">R</span>
+        <span class="wv-char">B</span><span class="wv-char">O</span><span class="wv-char">N</span>
+        <span class="wv-char">D</span>
+      </div>
+    </div>
+    <div class="footer-bottom container">
+      <p>&copy; 2026 Norbond Enterprises. All rights reserved.</p>
+      <div class="footer-bottom-locations">
+        <span>Dubai</span> &bull; <span>London</span> &bull; <span>Moscow</span> &bull; <span>Kerala</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
 </html>
